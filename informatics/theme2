@@ -1,0 +1,57 @@
+import math                 # 3455
+a, b = int(input()), int(input())
+c=math.sqrt(a**2+b**2)
+print(c)
+
+a=input()               # 3456
+b='Hello, '
+c='!'
+print(b+a+c)
+
+a=int(input())                                                              # 3457
+print('The next number for the number ', a, ' is ', a+1, '.', sep='')
+print('The previous number for the number ', a, ' is ', a-1, '.', sep='')
+
+a,b=int(input()),int(input())                   # 3458
+print(b//a)
+
+a,b=int(input()),int(input())               # 3459
+print(b%a)
+
+a,b=int(input()),int(input())               # 3460
+print((a*b)%109)
+
+a=int(input())              # 3461
+print(a%10)
+
+a=int(input())          # 3462
+print(a//10)
+
+a=int(input())              # 3463
+b=(a%100)//10
+print(b)
+
+a=int(input())              # 3464
+b=a//100
+c=(a%100)//10
+d=a%10
+print(b+c+d)
+
+a=int(input())              # 3465
+print(a+2-(a%2))
+
+a = int(input())                    # 3466
+b = int(input())
+L = int(input())
+N = int(input())
+print(2 * L + (2 * N - 1) * a + 2 * (N - 1) * b)
+
+a,b,c=int(input()), int(input()), int(input())              # 3467
+d=a//2+a%2+b//2+b%2+c//2+c%2
+print(d)
+
+a = int(input())                    # 3468
+b = a % (60 * 24) // 60
+c = a % 60
+print(b, c)
+
