@@ -1,0 +1,33 @@
+n = float(input())              #3608
+n1 = int(n)
+print(n-n1)
+    
+n = float(input())              #3609
+s = int(n*10)
+s1 = s%10
+print(s1)
+
+n = float(input())              #3610
+s = int(n*10)
+s1 = s//10
+if s%10>=5:
+    print(s1+1)
+elif s%10<5:
+    print(s1)
+
+a, b, c =float(input()), float(input()), float(input())             #3611
+p = (a+b+c)/2
+sq = p*(p-a)*(p-b)*(p-c)
+print(sq**0.5)
+
+n = float(input())              #3615
+n = (n+100)/100
+
+coin = float(input())
+coin2 = float(input())
+coin = coin+coin2/100
+
+year = coin * n
+year2 = int(year)
+year3 = int((year-year2)*100)
+print(year2,year3)
