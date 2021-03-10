@@ -1,0 +1,363 @@
+    *****Звездный треугольник
+def draw_triangle(height, width):
+    a = []
+    for k in range(1,16):
+        if k%2==1:
+            a.append(k)
+    for i in range(height):
+        print(' '*(height-1-i)+'*'*a[i])
+        
+    
+h = 8
+w = 15
+draw_triangle(h, w)
+
+    *****Калькулятор доставки
+# объявление функции
+def get_shipping_cost(quantity):
+    return 1000+(quantity-1)*120
+
+# считываем данные
+n = int(input())
+
+# вызываем функцию
+print(get_shipping_cost(n))
+
+    *****Биномиальный коэффициент
+from math import factorial
+def compute_binom(n, k):
+    return int((factorial(n)/(factorial(k)*factorial(n-k))))
+
+# считываем данные
+n = int(input())
+k = int(input())
+
+# вызываем функцию
+print(compute_binom(n, k))
+
+    *****Число словами
+# объявление функции
+def number_to_words(num):
+    zero_to_ninety_nine = ['ноль', 'один', 'два', 'три', 'четыре', 'пять', 'шесть', 'семь', 'восемь', 'девять', 'десять', 'одиннадцать', 'двенадцать', 'тринадцать', 'четырнадцать', 'пятнадцать', 'шестнадцать', 'семнадцать', 'восемнадцать', 'девятнадцать', 'двадцать', 'двадцать один', 'двадцать два', 'двадцать три', 'двадцать четыре', 'двадцать пять', 'двадцать шесть', 'двадцать семь', 'двадцать восемь', 'двадцать девять', 'тридцать', 'тридцать один', 'тридцать два', 'тридцать три', 'тридцать четыре', 'тридцать пять', 'тридцать шесть', 'тридцать семь', 'тридцать восемь', 'тридцать девять', 'сорок', 'сорок один', 'сорок два', 'сорок три', 'сорок четыре', 'сорок пять', 'сорок шесть', 'сорок семь', 'сорок восемь', 'сорок девять', 'пятьдесят', 'пятьдесят один', 'пятьдесят два', 'пятьдесят три', 'пятьдесят четыре', 'пятьдесят пять', 'пятьдесят шесть', 'пятьдесят семь', 'пятьдесят восемь', 'пятьдесят девять', 'шестьдесят', 'шестьдесят один', 'шестьдесят два', 'шестьдесят три', 'шестьдесят четыре', 'шестьдесят пять', 'шестьдесят шесть', 'шестьдесят семь', 'шестьдесят восемь', 'шестьдесят девять', 'семьдесят', 'семьдесят один', 'семьдесят два', 'семьдесят три', 'семьдесят четыре', 'семьдесят пять', 'семьдесят шесть', 'семьдесят семь', 'семьдесят восемь', 'семьдесят девять', 'восемьдесят', 'восемьдесят один', 'восемьдесят два', 'восемьдесят три', 'восемьдесят четыре', 'восемьдесят пять', 'восемьдесят шесть', 'восемьдесят семь', 'восемьдесят восемь', 'восемьдесят девять', 'девяносто', 'девяносто один', 'девяносто два', 'девяносто три', 'девяносто четыре', 'девяносто пять', 'девяносто шесть', 'девяносто семь', 'девяносто восемь', 'девяносто девять']
+    a = []
+    for i in range(100):
+        a.append(i)
+    for k in range(len(a)):
+        if a[k]==num:
+            b = a.index(num)
+    return zero_to_ninety_nine[b]
+# считываем данные
+n = int(input())
+
+# вызываем функцию
+print(number_to_words(n))
+
+    *****Искомый месяц
+# объявление функции
+def get_month(language, number):
+    if language=='ru':
+        lng_ru = ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь']
+        return lng_ru[number-1]
+    if language=='en':
+        lng_en = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december']
+        return lng_en[number-1]
+    
+# считываем данные
+lan = input()
+num = int(input())
+
+# вызываем функцию
+print(get_month(lan, num))
+
+    *****Магические даты
+# объявление функции
+def is_magic(date):
+    a = []
+    a = date.split('.')
+    n1 = int(a[0])
+    n2 = int(a[1])
+    n3 = int(a[2])
+    xax = n3%100
+    if xax==n1*n2:
+        return True
+    else:
+        return False
+
+
+# считываем данные
+date = input()
+
+# вызываем функцию
+print(is_magic(date))
+
+    *****Панграммы
+# объявление функции
+def is_pangram(text):
+    s = 'abcdefghijklmnopqrstuvwxyz'
+    counter = 0
+    t = text.lower()
+    for i in range(len(s)):
+        if s[i] in t:
+            counter+=1
+    if counter==26:
+        return True
+    else:
+        return False
+    
+    
+# считываем данные
+text = input()
+
+# вызываем функцию
+print(is_pangram(text))
+
+    *****Самый частотный символ
+s = input()
+s = list(s)
+s.reverse()
+s = ''.join(s)
+max = s.count(s[0])
+for c in s:
+    lol = s.count(c)
+    if lol>max:
+        max = lol
+a = []
+z = []
+for i in range(len(s)):
+    if s[i] in z:
+        continue;
+    else:
+        z.append(s[i])
+xex = ''.join(z)
+for c in xex:
+    if s.count(c)==max:
+        a.append(c)
+print(*a)
+
+#второе решение
+s = input()
+a = 0
+b = 0
+for i in range(len(s)):
+    temp = s[i]
+    x = s.count(temp)
+    if x>=a:
+        a=x
+        b = s.rfind(temp)
+
+print(s[b])
+
+    *****Численный треугольник 4
+n = int(input())
+for i in range(1,n+1):
+    for k in range(1,i+1):
+        if k==i:
+            for j in range(i,0,-1):
+                print(j, end='')
+        else:
+            print(k, end='')
+    print()
+
+    *****Делители-1
+n = int(input())
+nn = int(input())
+a, b = [], []
+for i in range(n,nn+1):
+    sum = 0
+    a.append(i)
+    for j in range(1,i+1):
+        if i%j==0:
+            sum+=j
+    b.append(sum)
+mx = max(b)
+c = []
+for i in range(n,nn+1):
+    sum = 0
+    for j in range(1,i+1):
+        if i%j==0:
+            sum+=j
+        if sum==mx:
+            c.append(i)
+c.reverse()
+print(c[0], mx)
+
+    *****Игра угадайка число
+from random import randint
+from time import sleep
+
+def is_valid(n, limit):
+    if n.isdigit():
+        return int(n) in range(1, limit+1)
+        return False
+
+def answer():
+    while 1:
+        answer = input().lower().strip()
+        if answer not in("да","нет"):
+            print("Введите 'да' или 'нет'")
+            continue
+        if answer == 'да':
+            game()
+        if answer == 'нет':
+            print('Спасибо, что играли в числовую угадайку. Еще увидимся...')
+            break
+
+def game():
+    print('Добро пожаловать в числовую угадайку!')
+    sleep(0.9)
+    limit = int(input('Введите верхнюю границу диапазона игры: '))
+    num = randint(1, limit)
+    amt = 0
+    while 1:
+        n = input()
+        if not is_valid(n, limit):
+            print(f'А может быть все-таки введем целое число от 1 до {limit}?')
+            continue
+        n = int(n)
+        if n == num:
+            amt += 1
+            print('Вы угадали, поздравляем! Число попыток:', amt)
+            sleep(0.9)
+            print("Хотите сыграть еще разок?) Да/Нет")
+            break
+        if n < num:
+            print('Ваше число меньше загаданного, попробуйте еще разок')
+            amt += 1
+        if n > num:
+            print('Ваше число больше загаданного, попробуйте еще разок')
+            amt += 1
+
+game()
+answer()
+
+    *****Магический шар 8
+import random as rnd
+answers = ["Бесспорно", "Мне кажется - да", "Пока неясно, попробуй снова",
+           "Даже не думай",
+           "Предрешено", "Вероятнее всего", "Спроси позже", "Мой ответ - нет",
+           "Никаких сомнений", "Хорошие перспективы", "Лучше не рассказывать",
+           "По моим данным - нет",
+           "Можешь быть уверен в этом", "Да", "Сконцентрируйся и спроси опять",
+           "Весьма сомнительно"]
+
+print('Привет Мир, я магический шар, и я знаю ответ на любой твой вопрос.')
+name = input('Назови свое имя: ')
+print(f'Приветствую тебя, о {name}!')
+again = 'д'
+while again.lower() == 'д':
+    print('Ты можешь задать свой вопрос:')
+    _ = input()
+    print(f'На это я могу ответить: {rnd.choice(answers)}...')
+    again = input(f'Есть ли у тебя еще вопросы, о {name}? (д = да, н = нет): ')
+
+print(f'Возвращайся если возникнут вопросы, уважаемый {name}!')
+
+    *****Генератор паролей
+import random as rnd
+def generate_passwords(long, chars):
+
+    '''генерируем пасс'''
+
+    password = ''
+
+    for _ in range(long):
+        password += rnd.choice(chars)
+
+    print(password)
+
+
+
+digits = '0123456789'
+lowercase_letters = 'abcdefghijklmnopqrstuvwxyz'
+uppercase_letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+punctuation = '!#$%&*+-=?@^_.'
+chars = ''
+
+count_pass = int(input('Сколько паролей сгенерировать? '))
+long_pass = int(input('Длинна пароля: '))
+
+if input('Нажми 1, чтобы разрешить прописные буквы ') == '1':
+    chars += lowercase_letters
+
+if input('Нажми 1, чтобы разрешить заглавные буквы ') == '1':
+    chars += uppercase_letters
+
+if input('Нажми 1, чтобы разрешить цифры ') == '1':
+    chars += digits
+
+if input('Нажми 1, чтобы разрешить символы ') == '1':
+    chars += punctuation
+
+if input('Нажми 1, чтобы разрешить неоднозначные символы "il1Lo0O" ') != '1':
+    for _ in 'il1Lo0O':
+        chars = chars.replace(_,'')
+
+for _ in range(count_pass):
+    generate_passwords(long_pass, chars)
+
+    *****Шифр Цезаря
+n = input()
+a = n.split()
+matrix = []
+l = 'abcdefghijklmnopqrstuvwxyz'
+u = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+for c in range (len(a)):
+    txt = ''
+    y = a[c]
+    for j in range(len(y)):
+        if y[j] in l or y[j] in u:
+            txt+=y[j]
+    matrix.append(txt)
+
+def get_shift(st):
+    shift = 0
+    for c in st:
+        if c.isalpha():
+            shift += 1
+    return shift
+d = []
+for c in a:
+    shift = get_shift(c)
+    d.append(shift)
+
+soz = ''
+def sdvig(symb, num):
+    abc = 'abcdefghijklmnopqrstuvwxyz'
+    symb_index = abc.find(symb.lower())
+    if symb_index + num > 25:
+        if symb.lower() == symb:
+            return abc[symb_index + num - 26]
+        else:
+            return abc[symb_index + num - 26].upper()
+    else:
+        if symb.lower() == symb:
+            return abc[symb_index + num]
+        else:
+            return abc[symb_index + num].upper()
+zaebka = []
+for i in range(len(d)):
+    q = matrix[i]
+    qq = d[i]
+    soz = ''
+    for j in range(d[i]):
+        x = sdvig(q[j],d[i])
+        soz+=x
+    zaebka.append(soz)
+kaif = n
+kaef = []
+another = []
+zaebka = ''.join(zaebka)
+zaebka = list(zaebka)
+kaif = ''.join(kaif)
+kaif = list(kaif)
+for i in range(len(kaif)):
+    if kaif[i] not in ('abcdefghijklmnopqrstuvwxyz'):
+        if kaif[i] not in ('ABCDEFGHIJKLMNOPQRSTUVWXYZ'):
+            lol = kaif[i]
+            zaebka.insert(i, lol)
+txt = ''
+for j in range(len(zaebka)):
+    txt += zaebka[j]
+print(txt)
+
+    
