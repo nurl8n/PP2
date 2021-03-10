@@ -1,0 +1,36 @@
+s = input()                         #3735
+print(s[2])
+print(s[-2])
+print(s[:5])
+print(s[:-2])
+print(s[::2])
+print(s[1::2])
+print(s[::-1])
+print(s[::-2])
+print(len(s))
+
+s = input()                         #3736
+a = s.count(' ')
+print(a+1)
+
+s = input()                         #3744
+print(s.replace('1','one',100))
+
+s = input()                         #3745
+txt = ''
+for i in range(len(s)):
+    if s[i]=='@':
+        continue
+    else:
+        txt+=s[i]
+print(txt)
+
+s = input()                         #3748
+txt = ''
+for i in range(len(s)):
+    if s.index(s[i])%3==0:
+        continue
+    else:
+        txt+=s[i]
+
+print(txt)
