@@ -1,0 +1,52 @@
+#3828
+
+s = input()
+ms = s.split(' ')
+txt = ''
+for i in range(0, len(ms),2):
+    txt+=ms[i]+' '
+print(txt)
+
+#3829
+
+s = input()
+ms = s.split(' ')
+txt = ''
+for i in range(len(ms)):
+    if int(ms[i])%2==0:
+        txt+=ms[i]+' '
+print(txt)
+
+#3835
+
+s = input()
+ms = s.split(' ')
+txt = ''
+a = []
+for i in range(len(ms)):
+    if int(ms[i])>0:
+        a.append(int(ms[i]))
+b = min(a)
+print(str(b))
+
+#3840
+
+s = input()
+a = s.split(' ')
+a.reverse()
+print(*a)
+
+#3850
+
+s = input()
+a = []
+ms = s.split(' ')
+cnt = 0
+for i in range(len(ms)):
+    if int(ms[i])>0:
+        a.append(int(ms[i]))
+    if int(ms[i])==0:
+        cnt+=1
+for i in range(cnt):
+    a.append(0)
+print(*a)
