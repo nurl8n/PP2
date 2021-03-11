@@ -1,0 +1,40 @@
+#1108
+
+s = input()
+ind = s.index('"')
+xax = s[ind:]
+
+class Solution():
+    def __init__(self, address):
+        self.address = address
+
+    def lol(self):
+        print(self.address.replace('.','[.]'))
+    
+first = Solution(xax)
+
+first.lol()
+
+#1678
+
+s = input()
+ind = s.index('"')
+txt = s[ind:]
+txt = txt.replace('()', 'o')
+txt2 = ''
+for i in range(len(txt)):
+    if txt[i]=='(' or txt[i]==')':
+        continue;
+    else:
+        txt2+=txt[i]
+print(txt2)
+
+#1512
+
+nums = list(input().split())
+cnt = 0
+for i in range(len(nums)):
+    for j in range(len(nums)):
+        if nums[i] == nums[j] and i < j:
+            cnt += 1
+print(cnt)
