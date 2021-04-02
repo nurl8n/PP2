@@ -1,2 +1,1 @@
-red line - sin
-blue line - cos
+red line - sin and blue line - cos
