@@ -1,0 +1,64 @@
+1) installed python locally, if I am not mistaken version of 3.8.5
+2) w3school 
+  *Python Intro
+    print("Hello, World!")
+  *Python User Input
+    username = input("Enter username:")
+    print("Username is: " + username)
+  *Python Get Started
+    python --version    # it is Python 3.8.5
+  *Python Syntax
+    print("Hello World")
+  *Python Comments
+    # This is a comment
+  *Python Variables
+    carname = "Volvo"
+  *Python Data Types
+    int
+  *Python Numbers
+    x = 5
+    x = float(x)
+  *Python Casting
+    # no exercises
+  *Python Strings
+    x = "Hello World"
+    print(len(x))
+  *Python String Formatting
+    # no exercises, but I got the idea of f strings
+  *Python Booleans
+    print(10>9)
+    True
+  *Python Operators
+    print(10*5)
+  *Python If...Else
+    a = 50
+    b = 10
+    if a > b:
+      print("Hello World")
+  *Python While Loops
+    i = 1
+    while i<6:
+      print(i)
+      i += 1
+  *Python For Loops
+    fruits = ["apple", "banana", "cherry"]
+    for x in fruits:
+      print(x)
+  *Python Arrays
+    # no exercises, but I am able to work with lists
+3)
+  sudo apt-get install git
+  git config --global user.name "My Name"
+  git config --global user.email myEmail@example.com
+  mkdir home/git_exercise/
+  cd home/git_exercise/
+  git init
+  git status
+  git add hello.txt
+  git add -A      # adding all
+  git commit -m "Initial commit."       # at the moment
+  git clone       # and so on
+4) created github account and some repositories
+  my PP2 repository is hidden, my collaborator is my assistant
+5) uploaded all the possible files there
+  
