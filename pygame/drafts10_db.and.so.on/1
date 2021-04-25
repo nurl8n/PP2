@@ -1,0 +1,21 @@
+1) psql -U postgres
+connecting to postgres
+then we get command line
+# for me on Linux it is
+sudo -u postgres psql
+
+2) 
+sudo -u postgres psql
+create database pp2demo;
+\l
+create user pp2user with password '123';
+grant all privileges on database pp2demo to pp2user;
+psql -U pp2user -h localhost -d demo;
+\dt 
+
+3) db is a kind of python class
+it also have some properties and so on
+in case of db it is just tables
+we can see left side in datagrip info about db, tables and so on
+
+40min
